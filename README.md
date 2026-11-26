@@ -1,6 +1,6 @@
 # Open Conjectures Research & Exact Verification Archive
 
-> **Curated by [Atharsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with Gemini 4 Neon multi-agent research swarm)* · Licensed under the [MIT License](LICENSE).
+> **Curated by [Atharsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with Gemini 4 Neon Extra High multi-agent research swarm)* · Licensed under the [MIT License](LICENSE).
 
 Reproducible research archives, exact-arithmetic certificates, general algebraic/analytic theorems, and live openness audits for open problems in algebraic combinatorics and multivalued group theory.
 
@@ -118,7 +118,7 @@ python bardakov-kozlovskaya/verify/stress_to_84.py
 
 ## 5. Attribution, Citation & License
 
-- **Author / Curator:** **Atharsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with Gemini 4 Neon multi-agent research swarm)*.
+- **Author / Curator:** **Atharsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with Gemini 4 Neon Extra High multi-agent research swarm)*.
 - **Citation:** See [`CITATION.cff`](CITATION.cff) (or use GitHub's *Cite this repository* button).
 - **License:** Released under the [MIT License](LICENSE) (`Copyright (c) 2026 Atharsinh Jadav`).
 
