@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Open Conjectures Research & Exact Verification Archive"
+message: "If you use these theorems, exact-arithmetic certificates, or verification scripts, please cite this repository as below."
+type: software
+authors:
+  - family-names: Jadav
+    given-names: Atharsinh
+    website: "https://athrix.me/"
+repository-code: "https://github.com/Atharvsinh-codez/conjectures"
+url: "https://athrix.me/"
+license: MIT
+date-released: "2026-11-26"
+keywords:
+  - combinatorics
+  - real-rooted polynomials
+  - Jacobi-Stirling polynomials
+  - multivalued groups
+  - exact arithmetic verification
