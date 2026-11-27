@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-title: "Open Conjectures Research & Exact Verification Archive"
-message: "If you use these theorems, exact-arithmetic certificates, or verification scripts, please cite this repository as below."
+title: "Open Conjectures Research & Exact Verification Archive: Resolution of Bardakov-Kozlovskaya Conjecture 3.3(2) and Gessel-Lin-Zeng Conjecture 15 Obstructions"
+message: "If you use these proofs, theorems, 50-digit interval certificates, or exact-arithmetic verification scripts, please cite this repository as below."
 type: software
 authors:
   - family-names: Jadav
@@ -9,10 +9,14 @@ authors:
 repository-code: "https://github.com/Atharvsinh-codez/conjectures"
 url: "https://athrix.me/"
 license: MIT
-date-released: "2026-11-26"
+date-released: "2026-11-27"
 keywords:
-  - combinatorics
-  - real-rooted polynomials
-  - Jacobi-Stirling polynomials
+  - Bardakov-Kozlovskaya conjecture
   - multivalued groups
+  - real-rooted polynomials
+  - real stability
+  - interval arithmetic
+  - Jacobi-Stirling polynomials
+  - Gessel-Lin-Zeng conjecture
+  - algebraic combinatorics
   - exact arithmetic verification
