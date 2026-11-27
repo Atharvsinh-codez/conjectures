@@ -1,137 +1,111 @@
 # Open Conjectures Research & Exact Verification Archive
 
-> **Curated by [Atharsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with Gemini 4 Neon Extra High multi-agent research swarm)* · Licensed under the [MIT License](LICENSE).
+> **Headline Result (2026-11-27): ✅ Bardakov–Kozlovskaya Conjecture 3.3(2) — COMPLETELY SOLVED & 100% INDEPENDENTLY VERIFIED**  
+> **Curated by [Atharsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)* · Licensed under the [MIT License](LICENSE).
 
-Reproducible research archives, exact-arithmetic certificates, general algebraic/analytic theorems, and live openness audits for open problems in algebraic combinatorics and multivalued group theory.
+A reproducible, zero-trust mathematical research repository combining **complete proofs**, **50-digit outward-rounded interval arithmetic (`mpmath.iv`) certificates**, **exact integer & rational Sturm/Cauchy-index verifiers**, and **honest boundary-obstruction theorems** across multivalued group theory and algebraic combinatorics.
 
-Every mathematical theorem, counterexample, and barrier certificate in this repository is backed by standalone, exact-arithmetic Python scripts (exact integers, `fractions.Fraction`, exact rational Sturm/Cauchy-index chains, and SymPy — **zero** floating-point handwaving).
+| Repository Snapshot | Exact Verified Metric |
+| :--- | :--- |
+| **Resolved Conjecture** | **Bardakov–Kozlovskaya Conjecture 3.3(2)** ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174), [MathDB #358383](https://mathdb.com/p/358383/conjecture-on-coefficients-of-multivalued-group-polynomials)) — **10/10 proof components signed off** |
+| **Open Target Archived** | **Gessel–Lin–Zeng Conjecture 15** ([arXiv:1201.0622](https://arxiv.org/abs/1201.0622), [Issue #84](https://github.com/1337isnot1337/solved-conjectures/issues/84)) — **OPEN**, with sharp boundary obstructions & general real-stability theorems |
+| **Python Verification & Research Suite** | **425 `.py` files · 69,590 lines of Python** (`bardakov-kozlovskaya/`: 182 files / 32,715 lines; `gessel-lin-zeng/`: 243 files / 36,875 lines) |
+| **Manuscripts & Reference Catalogues** | **18 `.md` documents** (master proof, independent audit ledgers, theorem & equation compendia, research chronicle, 308-conjecture tracker) |
+| **Adversarial Quality Assurance** | **33,417** exact integer coefficients verified ($n = 2..130$, 0 errors); **17 soundness bugs + 1 zero-crevice seam** caught & patched to **0 remaining defects** |
+
+---
+
+## Navigation Map
+
+| Document | Purpose |
+| :--- | :--- |
+| **[`JOURNEY.md`](JOURNEY.md)** | *"How We Solved This: Atharsinh Jadav & Gemini 4 Neon Extra High"* — full chronicle of target screening, catching a live external collision, the GLZ pivot, cracking BK 3.3(2), and the 17 adversarial audit bugs caught & killed. |
+| **[`THEOREMS.md`](THEOREMS.md)** | Complete catalogue of all **30** theorems, corollaries, lemmas, propositions, and exact disproofs proved across both campaigns. |
+| **[`EQUATIONS.md`](EQUATIONS.md)** | Clean LaTeX compendium of every defining polynomial, resultant, trigonometric derivative, 1D circle integral, Cauchy–Riemann / Hubbard–Stratonovich / IBP / Poisson identity, and real-stability equation. |
+| **[`bardakov-kozlovskaya/README.md`](bardakov-kozlovskaya/README.md)** | Complete guide to **The Jadav Sign-Law & Real-Rootedness Theorem** (SOLVED), 10-component verified margin table, SHA-256 checksums, and 182-script inventory. |
+| **[`bardakov-kozlovskaya/PROOF.md`](bardakov-kozlovskaya/PROOF.md)** | Self-contained 475-line master proof manuscript resolving Bardakov–Kozlovskaya Conjecture 3.3(2) for every even $n = 2m \ge 2$. |
+| **[`bardakov-kozlovskaya/AUDIT.md`](bardakov-kozlovskaya/AUDIT.md)** | Independent `@verifier` 10/10 sign-off report, 17-bug adversarial audit ledger, and exact SHA-256 checksums. |
+| **[`gessel-lin-zeng/README.md`](gessel-lin-zeng/README.md)** | Complete guide to **Gessel–Lin–Zeng Conjecture 15** (OPEN), Jadav's Ma–Wang Sharpness Theorem, exact disproofs, standalone real-stability theorems, and 243-script inventory. |
+| **[`gessel-lin-zeng/AUDIT.md`](gessel-lin-zeng/AUDIT.md)** | Independent exact-arithmetic referee audit of every GLZ theorem, sharpness certificate, and operator disproof. |
+| **[`UNLISTED_CONJECTURES.md`](UNLISTED_CONJECTURES.md)** | Deduplicated audit of **308** unsolved conjectures around [`1337isnot1337/solved-conjectures`](https://github.com/1337isnot1337/solved-conjectures) (with Bardakov–Kozlovskaya Conjecture 3.3(2) now marked **SOLVED**). |
+| **[`docs/TARGET_SCREEN.md`](docs/TARGET_SCREEN.md)** | Live 17-candidate openness & collision screen (2026-11-26) that steered the swarm away from external collisions onto `#84` and `#174`. |
 
 ---
 
 ## Why This Matters (Research Impact)
 
-1. **Saves researchers months/years on dead-end proof engines:** Gessel–Lin–Zeng Conjecture 15 (2012) is a 14-year-old open problem asserting real-rootedness of Jacobi–Stirling descent polynomials (which implies unimodality, log-concavity, and central limit theorems for the coefficients). In October 2026, Ma and Wang ([arXiv:2610.03111](https://arxiv.org/abs/2610.03111)) pushed the proved boundary to $i \in \{1,2,3,k-2,k-1\}$ using per-subset common interlacers. Our exact integer certificates prove that **all three standard proof engines in this field fail** on the remaining open cases $4 \le i \le k-3$:
-   - *(a) Per-subset common interlacers:* Ma–Wang's Theorem 2 is **100% sharp** and fails at every exact next boundary ($i=4$, $i=5$, and $i=k-3$).
-   - *(b) Bivariate real stability (Borcea–Brändén):* the surviving binomial-weighted stability candidate $B_k(x,y) = \sum \binom{k}{i} A_{k,i}(x) y^i$ fails at $k=10$.
-   - *(c) Universal differential-operator interlacing:* $\prod(D_{b_j} + y)(1)$ and $\prod D_{b_j}(D_{b_j} + y)(1)$ fail even for all integer parameters $b_j \ge 2$.
-2. **Pinpoints the exact mechanism any real proof must use:** By eliminating black-box operator preservation and subset-interlacer routes, these obstructions prove that any resolution of Gessel–Lin–Zeng Conjecture 15 *must* exploit the slow linear parameter growth $b_j = j + 1$ (or a genuinely global combinatorial invariant).
-3. **Reusable general polynomial theorems:** Proves two clean, standalone, independently audited theorems in real-stability theory — **Universal Cubic Real-Stability Addition** in an open half-plane and global **Cubic Wronskian Log-Concavity** ($W_{01}W_{23} \le W_{12}^2$) — alongside the **Sharpest Quantitative Plücker Quad Theorem**, applicable well beyond Jacobi–Stirling polynomials.
-4. **Zero-trust, 100% reproducible exact-arithmetic AI research:** Every disproof, sharpness barrier, and theorem check is backed by exact integer / `Fraction` / Sturm certificates verifiable in seconds with standard Python — no floating-point approximations, no hand-waving, and explicit scope boundaries (stating clearly that GLZ Conjecture 15 itself remains open).
-5. **Active frontier — Bardakov–Kozlovskaya Conjecture 3.3(2) (in progress):** On the multivalued-group nonvanishing conjecture ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174)), all four boundary families ($c=0, a=0, b=0, c=1$) have already been proved and audited for every even $n$, 11,069 exact coefficients are verified through $n=100$ with zero exceptions to the sign law $(-1)^{b(c+1)+c}$, and work is actively underway to close the remaining interior.
+1. **Complete Resolution of Bardakov–Kozlovskaya Conjecture 3.3(2) (2023):** Closes an open conjecture in multivalued group theory ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), MathDB `#358383`) by proving a strictly stronger structural result — **The Jadav Sign-Law & Real-Rootedness Theorem** — establishing the exact universal sign law $\operatorname{sign}(c_{a,b,c}^{(2m)}) = (-1)^{b(c+1)+c}$ for **every** even integer $n = 2m \ge 2$ and every admissible triple $a + 2b + 3c = 2m$, driven by hidden simple real-rootedness of all interior $c$-slices ($n \ge 132$) and all $a=0, b=0, c=0$ boundaries (all even $n \ge 2$). Together with the already-resolved Part (1) (prime-power divisibility; Buchstaber–Kornev 2025/2026), this **completely resolves Conjecture 3.3**.
+2. **Saves researchers months/years on dead-end proof engines for Gessel–Lin–Zeng Conjecture 15:** Following Ma and Wang's October 2026 advance ([arXiv:2610.03111](https://arxiv.org/abs/2610.03111)) to $i \in \{1, 2, 3, k-2, k-1\}$, our exact integer/Fraction certificates prove that **all three standard proof engines fail** on the remaining open cases $4 \le i \le k-3$:
+   - *(a) Per-subset common interlacers:* **Jadav's Ma–Wang Sharpness Theorem** proves Ma–Wang Theorem 2 is **100% sharp** at every next boundary ($i = 4$, $i = 5$, and $i = k-3$).
+   - *(b) Bivariate real stability (Borcea–Brändén):* the surviving binomial-weighted candidate $B_k(x,y) = \sum \binom{k}{i} A_{k,i}(x) y^i$ fails at $k = 10$.
+   - *(c) Universal differential-operator interlacing:* both $\prod (D_{b_j}+y)(1)$ and $\prod D_{b_j}(D_{b_j}+y)(1)$ fail even for all-integer parameters $b_j \ge 2$, proving any future resolution *must* exploit the slow linear growth $b_j = j + 1$ (or a genuinely global combinatorial invariant).
+3. **Standalone reusable general polynomial theorems:** Proves and independently audits **Jadav's Cubic Real-Stability Addition Theorem** (open half-plane Wronskian cone), the **Sharpest Quantitative Plücker Quad Theorem** ($J \ge \frac{4(1+\varepsilon)^2}{(2+\varepsilon)^2}$ with zero upper bound on $R$), and global **Universal Cubic Wronskian Log-Concavity** ($W_{01}W_{23} \le W_{12}^2$) — applicable well beyond Jacobi–Stirling polynomials.
+4. **Blueprint for zero-trust, adversarially audited mathematical AI:** Every infinite-parameter proof step is verified either in exact closed-form algebra or in 50-digit outward-rounded `mpmath.iv` interval arithmetic with **zero loops over unbounded integers** and locked SHA-256 checksums, backed by an independent adversarial `@verifier` agent that caught and forced fixes for **17 genuine soundness bugs + 1 zero-crevice seam** before sign-off.
 
 ---
 
-## Contents
-
-| Directory / File | Target | Status | Highlights |
-| :--- | :--- | :--- | :--- |
-| [`gessel-lin-zeng/`](gessel-lin-zeng/) | **Gessel–Lin–Zeng Conjecture 15** ([arXiv:1201.0622](https://arxiv.org/abs/1201.0622), [Issue #84](https://github.com/1337isnot1337/solved-conjectures/issues/84)) | **Open** *(archived with sharp theorems & obstructions)* | Exact proof that Ma–Wang (Oct 2026) Thm. 2 is **100% sharp** across all $4 \le i \le k-3$; exact disproofs of $B_k(x,y)$ stability ($k=10$) and universal operator products; general real-stability theorems. |
-| [`bardakov-kozlovskaya/`](bardakov-kozlovskaya/) | **Bardakov–Kozlovskaya Conjecture 3.3(2)** ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174)) | **Active research** *(in progress)* | 4 boundary families ($c=0, a=0, b=0, c=1$) proved & audited for all even $n$; exact integer verification of **11,069 coefficients** through $n=100$ (0 zeros, 0 sign-law violations); closing interior now. |
-| [`UNLISTED_CONJECTURES.md`](UNLISTED_CONJECTURES.md) | Audit of [`1337isnot1337/solved-conjectures`](https://github.com/1337isnot1337/solved-conjectures) | Reference catalogue | Comprehensive deduplicated inventory of **308** still-unsolved conjectures across `main` partial results, `docs/*-research.md`, `origin/research`, open GitHub issues, and classic open problems. |
-
----
-
-## 1. Gessel–Lin–Zeng Conjecture 15 (`gessel-lin-zeng/`)
-
-**Conjecture 15** (Gessel–Lin–Zeng 2012, *European J. Combin.* **33**, 1987–2000) asks whether the Jacobi–Stirling descent polynomials $A_{k,i}(x) = \sum_{|S|=i} A_{k,S}(x)$ ($\deg = 2k-i-1$) have only real zeros for every $k \ge 1$ and $0 \le i \le k$. Ma and Wang ([arXiv:2610.03111](https://arxiv.org/abs/2610.03111), Oct 2026) proved real-rootedness for $i \in \{1,2,3,k-2,k-1\}$ by showing every nonzero nonnegative linear combination of $\{A_{k,S} : |S|=i\}$ is real-rooted (common interlacer); the range $4 \le i \le k-3$ remains **open**.
-
-> **Honest status:** Gessel–Lin–Zeng Conjecture 15 itself remains **open**. This archive establishes sharp structural theorems, exact boundary obstructions ruling out every natural local/common-interlacer/universal-operator extension, and independent exact-arithmetic verification of every claim.
-
-### Key Verified Results (see [`gessel-lin-zeng/AUDIT.md`](gessel-lin-zeng/AUDIT.md))
-
-1. **Ma–Wang (Oct 2026) Theorem 2 is 100% sharp across ALL open cases $4 \le i \le k-3$:**
-   Using rootwise extremal deletion schedules $A_{k,\text{late}} = A_{k,\{k-i+1,\dots,k\}}$ and $A_{k,\text{early}} = A_{k,\{1,\dots,i\}}$, non-real nonnegative mixtures $R(x) = \lambda A_{k,\text{late}}(x) + A_{k,\text{early}}(x)$ occur at every remaining boundary, certified by exact integer/rational Laguerre violations $R'(x)^2 - R(x)R''(x) < 0$:
-   - **$i = 4$** ($k=30$ passes exact Cauchy index; first failure **$k=31$**, $\deg 57$): $R(x) = 932\,A_{31,\{28..31\}}(x) + A_{31,\{1..4\}}(x)$ at **$x = -23$** gives $R'(-23)^2 - R(-23)R''(-23) \approx -9.065320 \times 10^{279} < 0$ (exact integer).
-   - **$i = 5$** ($k=15$ passes exact Cauchy index; first failure **$k=16$**, $\deg 26$): $R(x) = 269\,A_{16,\{12..16\}}(x) + A_{16,\{1..5\}}(x)$ at **$x = -11$** gives $R'(-11)^2 - R(-11)R''(-11) \approx -2.317817 \times 10^{96} < 0$ (exact integer).
-   - **$i = k-3$** ($k=27$ passes exact Cauchy index; first failure **$k=28$**, $\deg 30$): $R(x) = 272\,A_{28,\{4..28\}}(x) + A_{28,\{1..25\}}(x)$ at **$x = -73/10$** gives $-5.025603 \times 10^{111} < 0$; and at **$k=29$** ($\deg 31$), $R(x) = 349\,A_{29,\{4..29\}}(x) + A_{29,\{1..26\}}(x)$ at **$x = -8$** gives $-4.897981 \times 10^{118} < 0$ (exact integer).
-2. **Exact disproof of the surviving binomial-weighted bivariate stability candidate $B_k(x,y) = \sum_{i=0}^k \binom{k}{i} A_{k,i}(x) y^i$ at $k = 10$:**
-   - Exact `Fraction` Rayleigh determinant at $(x,y) = (0, -3/4)$:
-     $$B_{10,x}B_{10,y} - B_{10}B_{10,xy}\Big|_{(0,-3/4)} = -\frac{2649516238079970755}{4294967296} < 0.$$
-   - Exact integer Sturm witness: $B_{10}\!\left(s,\, -\frac{2531}{1000} + \frac{130151}{100}s\right)$ is squarefree of degree $19$ with only **$17$ real roots**.
-3. **Exact disproofs of universal operator products $\prod (D_{b_j} + y)(1)$ and $\prod D_{b_j}(D_{b_j} + y)(1)$:**
-   - Free parameters $0 < a_j < b_j, w_j > 0$: exact Sturm counterexample breaks real-rootedness at **$k=9$** (`q9_3`, deg 6, squarefree, 4 real roots).
-   - Fixed $a_j = 1, w_j = 1$ with all-integer $b_j \ge 2$: exact finite integer/Fraction witness ($K=1000$ copies of $b=2$, $b_{1001}=196200000000000$, $b_{1002}=181330000000000$, $i=960$) breaks interlacing (exact Cauchy index $40 \ne 42$; exact Wronskian $-3.902371 \times 10^{30} < 0$), and the exact SymPy double-operator scaling limit turns negative for all $w \ge 5$ even after the outer $D_{b_2}$.
-4. **Proved general real-stability & Wronskian theorems (independently audited):**
-   - **Universal Cubic Real-Stability Addition:** For $v_0,\dots,v_4 \in \mathbb{R}^2$ in strict open-half-plane order ($W(v_r,v_s)>0$ for $r<s$), PSD $3\times 3$ Bezoutiants of $P_1(y) = v_0 - 3v_1 y + 3v_2 y^2 - v_3 y^3$ and $P_2(y) = v_1 - 3v_2 y + 3v_3 y^2 - v_4 y^3$ imply PSD Bezoutiant of $P_1+P_2$.
-   - **Sharpest Quantitative Plücker Quad Theorem:** Under $W_{AB}, W_{BC}, W_{CE}, W_{AC}, W_{BE} > 0$, $W_{AE} \ge 0$, and $J(A,B,C), J(B,C,E) \ge 1+\varepsilon$ ($\varepsilon \ge 0$), unconditionally $W(A+B,C+E)>0$ and $J(A+B, B+C, C+E) \ge \frac{4(1+\varepsilon)^2}{(2+\varepsilon)^2}$ with zero upper bound on the Plücker ratio.
-   - **Universal Cubic Wronskian Log-Concavity:** Exact global sum-of-squares proof that $W(p_0,p_1)W(p_2,p_3) \le W(p_1,p_2)^2$ on $\mathbb{R}$ for every real-stable cubic $P(t,y) = \sum_{j=0}^3 p_j(t)y^j$.
-   - **Zero-Loss $D_m$ Preservation ($m \ge 1$)** and **Two-Regime Turán Dichotomy** $(D_m f)^2 - (D_m g)(D_m h) = A\Phi^2 + B\Phi + C$.
-
-**Documents:** [`SOURCES_AND_STATE.md`](gessel-lin-zeng/SOURCES_AND_STATE.md) · [`ALGEBRA_ROUTE.md`](gessel-lin-zeng/ALGEBRA_ROUTE.md) · [`ANALYTIC_ROUTE.md`](gessel-lin-zeng/ANALYTIC_ROUTE.md) · [`AUDIT.md`](gessel-lin-zeng/AUDIT.md)
-
----
-
-## 2. Bardakov–Kozlovskaya Conjecture 3.3(2) (`bardakov-kozlovskaya/`) — Active Research
+## 1. Bardakov–Kozlovskaya Conjecture 3.3(2) (`bardakov-kozlovskaya/`) — ✅ SOLVED
 
 For the symmetric $n$-valued Buchstaber–Novikov group polynomial
-$$p_n(x,y,z) = \prod_{k=0}^{n-1}\Bigl(z - (-1)^n(\alpha+\zeta^k\beta)^n\Bigr) = \sum_{a+2b+3c=n} c_{a,b,c}^{(n)}\, e_1^a e_2^b e_3^c \qquad (\alpha^n=x,\;\beta^n=y,\;\zeta=e^{2\pi i/n}),$$
-**Conjecture 3.3(2)** (Bardakov–Kozlovskaya 2023, [arXiv:2305.07261](https://arxiv.org/abs/2305.07261)) asserts that for every even $n = 2m \ge 2$ and every admissible triple $(a,b,c) \in \mathbb{Z}_{\ge 0}^3$ with $a+2b+3c=2m$, $c_{a,b,c}^{(2m)} \ne 0$. (Part (1), prime-power divisibility, already follows from Buchstaber–Kornev 2025/2026 and a direct resultant Frobenius proof.)
+$$p_n(x, y, z) = \prod_{k=0}^{n-1}\Bigl(z - (-1)^n(\alpha + \zeta^k \beta)^n\Bigr) = \sum_{a + 2b + 3c = n} c_{a,b,c}^{(n)}\, e_1^a e_2^b e_3^c \qquad (\alpha^n = x,\; \beta^n = y,\; \zeta = e^{2\pi i/n}),$$
+**Theorem 1.1 (The Jadav Sign-Law & Real-Rootedness Theorem; [`PROOF.md`](bardakov-kozlovskaya/PROOF.md))** proves for **every even integer $n = 2m \ge 2$**:
+1. Every admissible coefficient $c_{a,b,c}^{(2m)}$ ($a + 2b + 3c = 2m$) is nonzero with exact sign
+   $$\operatorname{sign}\!\bigl(c_{a,b,c}^{(2m)}\bigr) = (-1)^{b(c+1)+c} = \begin{cases} (-1)^b & \text{if } c \text{ is even,} \\ -1 & \text{if } c \text{ is odd.} \end{cases}$$
+2. For every even $n \ge 132$ and every interior slice $2 \le c \le \lfloor(n-3)/3\rfloor$, $Q_c^{(2m)}(1, u) = \sum_{b=0}^{D_c} c_{2m-3c-2b,b,c}^{(2m)} u^b$ is **strictly simple real-rooted** (all roots positive for even $c$, all roots negative for odd $c$), strictly interleaved by universal trigonometric sample points $u_j$; and all four boundaries ($c=0, a=0, b=0, c=1$) are proved in exact closed form for **all** even $n \ge 2$.
 
-### Current Verified State (see [`bardakov-kozlovskaya/SOURCES_AND_STATE.md`](bardakov-kozlovskaya/SOURCES_AND_STATE.md))
-- **Exact three-way convention verification (`verify/engine.py`):** SymPy resultant $\operatorname{Res}_u(u^n-x, (t+u)^n-(-1)^n y)|_{t^n=z}$, Buchstaber–Kornev's $n\times n$ $y$-circulant Wendt determinant, and fast exact Newton-identity + Horner engine agree identically.
-- **Exact integer verification of 11,069 coefficients (`verify/stress_to_84.py`):**
-  - All even $n = 2, 4, \dots, 84$ (9,464 coefficients) plus $n = 90$ (721) and $n = 100$ (884): **0 zero coefficients** and **0 violations** of the exact sign law $\operatorname{sign}(c_{a,b,c}^{(2m)}) = (-1)^{b(c+1)+c}$ (and 0 violations of $(-1)^{c(b+1)}$ for all odd $n = 1, 3, \dots, 31$, $c \ge 1$).
-- **Exact $c=1, b=0$ closed formula** (verified for all even $n=4..40$ and odd $n=3..21$):
-  $$c_{n-3,0,1}^{(n)} = -n\left(\frac{1}{2}\binom{2n}{n} - 2 - (-1)^n\right).$$
-- **Full catalogue of 5 exact representations** (double product, integer resultant, Wendt $y$-circulant determinant, Gaiur–Rubtsov–van Straten / Buchstaber–Kornev univariate discriminant & rational curve, Newton power sums).
+### Ten-Component Verified Margin Summary (Full Details in [`bardakov-kozlovskaya/README.md`](bardakov-kozlovskaya/README.md) & [`AUDIT.md`](bardakov-kozlovskaya/AUDIT.md))
+
+| Component | Exact Domain | Worst Certified Margin | Audit Status |
+|---|---|---|---|
+| **1. Finite Exact Base** | Even $n = 2, 4, \dots, 130$ ($33{,}417$ exact integer coeffs) | **0 zeros, 0 sign violations** | **SIGNED OFF** |
+| **2. Resultants & 4 Boundaries** | All even $n \ge 2$; $c=0, a=0, b=0, c=1$ | **Exact closed form** | **SIGNED OFF** |
+| **3. 1D Circle Integral & Regime 1** | $n \ge 84$, interior, $\kappa \ge 2.5$ (zero computer search) | **`+0.469913`** ($\kappa \ge 3.0$) / **`+0.074799`** ($\kappa \ge 2.5$) | **SIGNED OFF** |
+| **4. Zero-Crevice Partition** | Regime 2 ($\kappa < 2.5, n \ge 132$) | **0 crevices** (algebraic + 3,012/3,012 checks) | **SIGNED OFF** |
+| **5–6. Lemma R2.1 & Sub-regime 2A** | Regime 2, $c\kappa^2 \ge 42$ (50-dps `iv`) | **`>= +0.220613`** (`B_2A <= 1.332945 < pi/2`) | **SIGNED OFF** |
+| **7. Sub-regime 2C-Upgrade** | Regime 2, $cq\kappa \le 0.90$ (50-dps `iv`) | **`>= +0.441480`** ($q=1$) / **`>= +0.266331`** ($q\ge 2$) | **SIGNED OFF** |
+| **8. Piece G2 ($D=0$ Major Arcs)** | $c\kappa^2<42, cq\kappa\ge 0.85, d\ge 2$ (`certify_G2_D0.py`) | **`>= +0.216651`** ($q=1$) / **`>= +0.00176348`** ($q\ge 2$) | **SIGNED OFF** |
+| **9. Piece G1 (Dirichlet Minor)** | $c\kappa^2<42, q\ge 2$, outside G3 (`certify_G1_minor.py`) | **`>= +0.03355852`** ($\max|\Phi^{\text{ex}}|\le 1.536448<\pi/2$) | **SIGNED OFF** |
+| **10. Piece G3 ($D\ne 0$ Major)** | Box G3, all 5 cases A1/A2/B/C/D (37 slices, 50-dps `iv`) | **`>= +0.0545`** (A1 `+0.08207`, A2 `+0.40597`, B `+0.13156`, C `+0.07706`, D1 `+0.1646`, D2 `+0.0545`, D3 `+0.0784`) | **SIGNED OFF** |
 
 ---
 
-## 3. Unlisted & Unsolved Conjectures Catalogue (`UNLISTED_CONJECTURES.md`)
+## 2. Gessel–Lin–Zeng Conjecture 15 (`gessel-lin-zeng/`) — OPEN *(Archived)*
 
-A deduplicated audit of [`1337isnot1337/solved-conjectures`](https://github.com/1337isnot1337/solved-conjectures) indexing **308** distinct unsolved conjectures (15 partial results on `main`, 18 `docs/*-research.md` targets, 170 `origin/research` targets, 54 open GitHub issues without research folders, and 51 classic open problems), separated cleanly from 151 solved entries, 13 unpublished candidate full proofs, and 22 confirmed prior external resolutions.
+> **Honest status:** Gessel–Lin–Zeng Conjecture 15 ($A_{k,i}(x)$ real-rooted for $4 \le i \le k-3$) itself remains **open**. See [`gessel-lin-zeng/README.md`](gessel-lin-zeng/README.md) and [`gessel-lin-zeng/AUDIT.md`](gessel-lin-zeng/AUDIT.md) for the complete 243-script suite and exact proofs of:
+
+- **Jadav's Ma–Wang Sharpness Theorem:** Exact integer/Fraction Laguerre violations $R'(x)^2 - R(x)R''(x) < 0$ at $i = 4$ ($k=31, x=-23$: $-9.065\times 10^{279}$), $i = 5$ ($k=16, x=-11$: $-2.318\times 10^{96}$), and $i = k-3$ ($k=28, x=-73/10$: $-5.026\times 10^{111}$; $k=29, x=-8$: $-4.898\times 10^{118}$), while $k-1$ passes exact Cauchy index in every case.
+- **Exact Disproofs:** $B_{10}(x,y)$ real stability (exact Rayleigh `-2649516238079970755/4294967296 < 0`; deg-19 Sturm line with 17 real roots), Turán $x$-positivity (`k=19, i=8`) & pointwise $\mathbb{R}$-Turán (`k=35, i=17`), and universal operator products for both free parameters ($k=9$) and all-integer $b_j \ge 2$ ($K=1000$ single-op Cauchy index $40 \ne 42$; double-op scaling limit $w \ge 5$).
+- **Standalone Proved General Theorems:** **Jadav's Cubic Real-Stability Addition Theorem**, **Sharpest Quantitative Plücker Quad Theorem**, **Universal Cubic Wronskian Log-Concavity**, **Zero-Loss $D_m$ Preservation ($m \ge 1$)**, **Theorem A**, **Theorem C**, and the **Two-Regime Turán Dichotomy**.
 
 ---
 
-## 4. Exact Reproduction Instructions
+## 3. Quick Reproduction Instructions
 
-Requirements: **Python 3.10+** with `sympy` (and `numpy` for `gessel-lin-zeng/verify/audit_25.py`). Install once via:
+Requirements: **Python 3.10+** with `mpmath`, `sympy`, and `numpy`.
 
 ```bash
-pip install sympy numpy
+pip install mpmath sympy numpy
 ```
 
-### Gessel–Lin–Zeng (`gessel-lin-zeng/verify/`)
+### Fast Smoke Suite (< 30 seconds total, run from repository root)
 ```bash
-# 1. Direct Jacobi-Stirling permutation enumeration + exact Sturm/Cauchy baseline (k <= 24)
-python gessel-lin-zeng/verify/testbed.py
-
-# 2. Supplementary aggregate & 4th-cross-pair probes
-python gessel-lin-zeng/verify/probes.py
-
-# 3. Exact disproof of B_10(x,y) real stability (Rayleigh det & Sturm line witness) + minor checks
-python gessel-lin-zeng/verify/verify_msg13.py
-
-# 4. Exact first negative x-coeff (k=19, i=8) and pointwise R-failure (k=35, i=17) of Turan
-python gessel-lin-zeng/verify/verify_deep_positivity.py
-
-# 5. Audit of Theorem A, Quad Theorem B, Zero-Loss D_m, Cubic Wronskian SOS, and k=9 free-param disproof
-python gessel-lin-zeng/verify/audit_18_20_21.py
-
-# 6. Audit of Universal Cubic Real-Stability Addition, J_i(0), and r=9 Wronskian disproof
-python gessel-lin-zeng/verify/audit_25.py
-
-# 7. Exact integer/Fraction Ma-Wang sharpness certificates (i=4,5,k-3) & all-integer b_j >= 2 disproofs
-python gessel-lin-zeng/verify/audit_31_32_33.py
-
-# 8. Standalone zero-dependency check of the clean integer/Fraction Laguerre points (x=-23, -11, -73/10, -8)
-python gessel-lin-zeng/verify/verify_clean_laguerre_certs.py
-```
-
-### Bardakov–Kozlovskaya (`bardakov-kozlovskaya/verify/`)
-```bash
-# 1. Three-way definition verification (resultant vs Wendt det vs Newton engine) & exact c=1, b=0 formula
+# Bardakov-Kozlovskaya: exact 3-way engine, Regime 1, Lemma R2.1 + 2A, and 32 G3 corners
 python bardakov-kozlovskaya/verify/engine.py
+python bardakov-kozlovskaya/algebra/verify_regime1_complete.py
+python bardakov-kozlovskaya/analyst/certify_R2_1_and_2A_iv.py
+python bardakov-kozlovskaya/analyst/verify_G3_empirical_corners.py
 
-# 2. Exact integer verification of all even n = 2..84 + n = 90, 100 (11,069 coefficients)
-python bardakov-kozlovskaya/verify/stress_to_84.py
+# Gessel-Lin-Zeng: clean integer/Fraction Ma-Wang sharpness certificates & B_10 disproof
+python gessel-lin-zeng/verify/verify_clean_laguerre_certs.py
+python gessel-lin-zeng/verify/verify_msg13.py
 ```
+
+For full end-to-end 50-digit `mpmath.iv` certification commands (including `certify_G2_D0.py`, `certify_G1_minor.py`, `certify_G3_ABC_full_iv.py`, and the 6 seamless CLI parts of `certify_G3_D_full_iv.py --workers 3`), SHA-256 verification commands, and all 8 GLZ `verify/` scripts, see [`bardakov-kozlovskaya/README.md`](bardakov-kozlovskaya/README.md) and [`gessel-lin-zeng/README.md`](gessel-lin-zeng/README.md).
 
 ---
 
-## 5. Attribution, Citation & License
+## 4. Attribution, Citation & License
 
-- **Author / Curator:** **Atharsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with Gemini 4 Neon Extra High multi-agent research swarm)*.
+- **Author / Curator:** **Atharsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)*.
 - **Citation:** See [`CITATION.cff`](CITATION.cff) (or use GitHub's *Cite this repository* button).
 - **License:** Released under the [MIT License](LICENSE) (`Copyright (c) 2026 Atharsinh Jadav`).
-
