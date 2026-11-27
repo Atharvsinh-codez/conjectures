@@ -1,7 +1,7 @@
 # Gessel–Lin–Zeng Conjecture 15 — Sharp Obstructions, Real-Stability Theorems & Exact Verification Suite
 
 > **Status: OPEN — Archived with Sharp Obstruction Theorems, Exact Disproofs & General Real-Stability Theorems**  
-> **Authors:** **[Atharsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
+> **Authors:** **[Atharvsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
 > **Source Problem:** I. M. Gessel, Z. Lin, & J. Zeng, *Jacobi–Stirling polynomials and $P$-partitions*, *European J. Combin.* **33** (2012), 1987–2000 ([arXiv:1201.0622](https://arxiv.org/abs/1201.0622)), Conjecture 15  
 > **Upstream Tracking:** [`1337isnot1337/solved-conjectures` Issue #84](https://github.com/1337isnot1337/solved-conjectures/issues/84) · SymCat (`realRootedOpenProblems.htm`)
 

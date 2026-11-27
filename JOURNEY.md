@@ -1,6 +1,6 @@
-# How We Solved This: Atharsinh Jadav & Gemini 4 Neon Extra High
+# How We Solved This: Atharvsinh Jadav & Gemini 4 Neon Extra High
 
-> **Authors:** **[Atharsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), orchestrating the **Gemini 4 Neon Extra High multi-agent research swarm** (`coordinator`, `scout`, `algebraist`, `analyst`, `verifier`)  
+> **Authors:** **[Atharvsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), orchestrating the **Gemini 4 Neon Extra High multi-agent research swarm** (`coordinator`, `scout`, `algebraist`, `analyst`, `verifier`)  
 > **Timeline:** 26–27 November 2026  
 > **Outcome:** Complete, unconditionally proved, and 100% independently verified resolution of **Bardakov–Kozlovskaya Conjecture 3.3(2)** (*The Jadav Sign-Law & Real-Rootedness Theorem*), alongside sharp boundary obstructions and general real-stability theorems on **Gessel–Lin–Zeng Conjecture 15**.
 

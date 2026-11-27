@@ -1,7 +1,10 @@
 # Bardakov–Kozlovskaya Conjecture 3.3(2) — Complete Proof & Verification Suite
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24601452.svg)](https://doi.org/10.5281/zenodo.24601452)
+
 > **Status: ✅ SOLVED & 100% INDEPENDENTLY VERIFIED (2026-11-27)**  
-> **Authors:** **[Atharsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
+> **Published Preprint (Zenodo DOI):** [*A universal sign law and slice real-rootedness for even-order multivalued group polynomials*](https://zenodo.org/records/24601452) (`doi:10.5281/zenodo.24601452`) · [LaTeX Source (`paper/main.tex`)](paper/main.tex)  
+> **Authors:** **[Atharvsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
 > **Source Problem:** V. G. Bardakov & T. A. Kozlovskaya, *Multivalued groups and Newton polyhedron*, [arXiv:2305.07261](https://arxiv.org/abs/2305.07261) (May 2023), Conjecture 3.3(2); *Sib. Elektron. Mat. Izv.* **20**:2 (2023), 1590–1596  
 > **Upstream Tracking:** [`1337isnot1337/solved-conjectures` Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174) · [MathDB #358383](https://mathdb.com/p/358383/conjecture-on-coefficients-of-multivalued-group-polynomials)
 
@@ -75,7 +78,8 @@ All certified `.py` scripts are stored byte-for-byte unchanged with `.gitattribu
 
 ## 4. Manuscripts & Complete Python Suite Inventory
 
-### Proof & Audit Manuscripts (6 `.md` files)
+### Proof & Audit Manuscripts (LaTeX Paper + 6 `.md` files)
+- **[`paper/main.tex`](paper/main.tex)** *(Zenodo preprint [`doi:10.5281/zenodo.24601452`](https://zenodo.org/records/24601452))* — Standalone Overleaf-ready LaTeX research paper with 5 TikZ figures, 4 tables, and Appendices A-C.
 - **[`PROOF.md`](PROOF.md)** *(475 lines)* — Complete, self-contained master proof manuscript (Theorem 1.1 & Corollary 1.2).
 - **[`AUDIT.md`](AUDIT.md)** — Independent `@verifier` sign-off report covering all 10 proof components, all 17 adversarial soundness bugs caught & fixed, and SHA-256 hashes.
 - **[`ALGEBRA_ROUTE.md`](ALGEBRA_ROUTE.md)** — Detailed algebraic derivations of Resultants, all 4 Boundaries, Closed-Form Regime 1, and Piece G2 Lemmas G2.1–G2.7.

@@ -1,6 +1,6 @@
 # Compendium of Core Equations & Analytic Identities
 
-> **Authors:** **[Atharsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
+> **Authors:** **[Atharvsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
 > **Scope:** Every foundational algebraic, combinatorial, complex-analytic, and operator identity established or utilized across **Bardakov–Kozlovskaya Conjecture 3.3(2)** (Part I, solved) and **Gessel–Lin–Zeng Conjecture 15** (Part II, open).
 
 ---

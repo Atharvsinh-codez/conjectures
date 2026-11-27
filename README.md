@@ -1,16 +1,20 @@
 # Open Conjectures Research & Exact Verification Archive
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24601452.svg)](https://doi.org/10.5281/zenodo.24601452) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 > **Headline Result (2026-11-27): ✅ Bardakov–Kozlovskaya Conjecture 3.3(2) — COMPLETELY SOLVED & 100% INDEPENDENTLY VERIFIED**  
-> **Curated by [Atharsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)* · Licensed under the [MIT License](LICENSE).
+> **Published Preprint (Zenodo DOI):** [*A universal sign law and slice real-rootedness for even-order multivalued group polynomials*](https://zenodo.org/records/24601452) (`doi:10.5281/zenodo.24601452`) · [LaTeX Source (`main.tex`)](bardakov-kozlovskaya/paper/main.tex)  
+> **Curated by [Atharvsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)* · Licensed under the [MIT License](LICENSE).
 
 A reproducible, zero-trust mathematical research repository combining **complete proofs**, **50-digit outward-rounded interval arithmetic (`mpmath.iv`) certificates**, **exact integer & rational Sturm/Cauchy-index verifiers**, and **honest boundary-obstruction theorems** across multivalued group theory and algebraic combinatorics.
 
 | Repository Snapshot | Exact Verified Metric |
 | :--- | :--- |
 | **Resolved Conjecture** | **Bardakov–Kozlovskaya Conjecture 3.3(2)** ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174), [MathDB #358383](https://mathdb.com/p/358383/conjecture-on-coefficients-of-multivalued-group-polynomials)) — **10/10 proof components signed off** |
+| **Published Preprint (PDF & LaTeX)** | **[Zenodo Record `24601452`](https://zenodo.org/records/24601452)** ([`doi:10.5281/zenodo.24601452`](https://doi.org/10.5281/zenodo.24601452)) · Standalone Overleaf LaTeX source [`bardakov-kozlovskaya/paper/main.tex`](bardakov-kozlovskaya/paper/main.tex) |
 | **Open Target Archived** | **Gessel–Lin–Zeng Conjecture 15** ([arXiv:1201.0622](https://arxiv.org/abs/1201.0622), [Issue #84](https://github.com/1337isnot1337/solved-conjectures/issues/84)) — **OPEN**, with sharp boundary obstructions & general real-stability theorems |
 | **Python Verification & Research Suite** | **425 `.py` files · 69,590 lines of Python** (`bardakov-kozlovskaya/`: 182 files / 32,715 lines; `gessel-lin-zeng/`: 243 files / 36,875 lines) |
-| **Manuscripts & Reference Catalogues** | **18 `.md` documents** (master proof, independent audit ledgers, theorem & equation compendia, research chronicle, 308-conjecture tracker) |
+| **Manuscripts & Reference Catalogues** | **19 `.md` documents + standalone LaTeX paper** (Zenodo preprint, master proof, independent audit ledgers, theorem & equation compendia, research chronicle, 308-conjecture tracker) |
 | **Adversarial Quality Assurance** | **33,417** exact integer coefficients verified ($n = 2..130$, 0 errors); **17 soundness bugs + 1 zero-crevice seam** caught & patched to **0 remaining defects** |
 
 ---
@@ -19,7 +23,8 @@ A reproducible, zero-trust mathematical research repository combining **complete
 
 | Document | Purpose |
 | :--- | :--- |
-| **[`JOURNEY.md`](JOURNEY.md)** | *"How We Solved This: Atharsinh Jadav & Gemini 4 Neon Extra High"* — full chronicle of target screening, catching a live external collision, the GLZ pivot, cracking BK 3.3(2), and the 17 adversarial audit bugs caught & killed. |
+| **[`bardakov-kozlovskaya/paper/main.tex`](bardakov-kozlovskaya/paper/main.tex)** | Full standalone Overleaf-ready LaTeX research paper published on **[Zenodo (`doi:10.5281/zenodo.24601452`)](https://zenodo.org/records/24601452)** with 5 TikZ diagrams, 4 tables, and Appendices A-C. |
+| **[`JOURNEY.md`](JOURNEY.md)** | *"How We Solved This: Atharvsinh Jadav & Gemini 4 Neon Extra High"* — full chronicle of target screening, catching a live external collision, the GLZ pivot, cracking BK 3.3(2), and the 17 adversarial audit bugs caught & killed. |
 | **[`THEOREMS.md`](THEOREMS.md)** | Complete catalogue of all **30** theorems, corollaries, lemmas, propositions, and exact disproofs proved across both campaigns. |
 | **[`EQUATIONS.md`](EQUATIONS.md)** | Clean LaTeX compendium of every defining polynomial, resultant, trigonometric derivative, 1D circle integral, Cauchy–Riemann / Hubbard–Stratonovich / IBP / Poisson identity, and real-stability equation. |
 | **[`bardakov-kozlovskaya/README.md`](bardakov-kozlovskaya/README.md)** | Complete guide to **The Jadav Sign-Law & Real-Rootedness Theorem** (SOLVED), 10-component verified margin table, SHA-256 checksums, and 182-script inventory. |
@@ -106,6 +111,19 @@ For full end-to-end 50-digit `mpmath.iv` certification commands (including `cert
 
 ## 4. Attribution, Citation & License
 
-- **Author / Curator:** **Atharsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)*.
-- **Citation:** See [`CITATION.cff`](CITATION.cff) (or use GitHub's *Cite this repository* button).
-- **License:** Released under the [MIT License](LICENSE) (`Copyright (c) 2026 Atharsinh Jadav`).
+- **Author / Curator:** **Atharvsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)*.
+- **Preprint (Zenodo DOI):** https://doi.org/10.5281/zenodo.24601452 (record: https://zenodo.org/records/24601452)
+- **Citation:** See [`CITATION.cff`](CITATION.cff) (or use GitHub's *Cite this repository* button):
+  ```bibtex
+  @misc{jadav2026universalsignlaw,
+    author       = {Jadav, Atharvsinh},
+    title        = {A universal sign law and slice real-rootedness for even-order multivalued group polynomials},
+    month        = nov,
+    year         = 2026,
+    publisher    = {Zenodo},
+    version      = {1.0},
+    doi          = {10.5281/zenodo.24601452},
+    url          = {https://doi.org/10.5281/zenodo.24601452}
+  }
+  ```
+- **License:** Released under the [MIT License](LICENSE) (`Copyright (c) 2026 Atharvsinh Jadav`).
