@@ -41,22 +41,22 @@ Independent exact-arithmetic reproductions of every theorem and certified dispro
 Every natural arbitrary-parameter generalization of the GLZ operator recurrence is **FALSE**, proving rigorously that any valid proof of Conjecture 15 must exploit the slow/linear growth $b_j = j+1$ (or another global GLZ-specific property):
 
 1. **Arbitrary $0 < a_j < b_j, w_j > 0$ single-op $\prod (T_j + w_j y)(1)$:** Fails real-rootedness (complex roots) at $k = 9$ (exact Sturm, audited `#23`).
-2. **Arbitrary $0 < a_j < b_j, w_j > 0$ double-op $\prod T_j(T_j + w_j y)(1)$ (`targeted_attack_doubleT.py`):** Breaks Turán at $k=6$ and breaks interlacing at $k=7$ (100-dps verified, `#27`).
-3. **All-integer $b_j \ge 2$ with $a_j = 1, w_j = 1$ single-op $\prod (D_{b_j} + y)(1)$ (`fast_certify_bge2_w1.py`, audited `#34`):**
+2. **Arbitrary $0 < a_j < b_j, w_j > 0$ double-op $\prod T_j(T_j + w_j y)(1)$ ([`analyst/targeted_attack_doubleT.py`](analyst/targeted_attack_doubleT.py)):** Breaks Turán at $k=6$ and breaks interlacing at $k=7$ (100-dps verified, `#27`).
+3. **All-integer $b_j \ge 2$ with $a_j = 1, w_j = 1$ single-op $\prod (D_{b_j} + y)(1)$ ([`analyst/fast_certify_bge2_w1.py`](analyst/fast_certify_bge2_w1.py), audited `#34`):**
    - Exact scaling limit $\mathcal{M}_{\text{sgl}}^{(w)}(\Phi)$ turns negative for all $w \ge 5$ (exact SymPy audit `#34`: $2\mathcal{M}_{\text{sgl}}/\alpha = (w+1)\Phi^2 + 3w(w+1)\Phi + (2w^3+3w^2+2w+1)$, discriminant $\Delta(5) = +36 > 0$).
    - **Exact integer/Fraction finite certificate ($K+2 = 1002$):** $K=1000$ steps of $b=2$, followed by $b_{1001} = 196200000000000$, $b_{1002} = 181330000000000$, at $i = 960$: exact Sturm certifies `P2[960]` (deg 42) and `P2[961]` (deg 41) are real-rooted in $(-1,0)$, exact Cauchy index is $40 \ne 42$, and exact `Fraction` Wronskian $W(P_2[961], P_2[960])(-1818/10^{16}) = -3.902371\times 10^{30} < 0$ (independently certified `#34`).
-4. **All-integer $b_j \ge 2$ with $a_j = 1, w_j = 1$ double-op $\prod D_{b_j}(D_{b_j} + y)(1)$ (`check_double_M_asymptotic.py`, audited `#34`):**
+4. **All-integer $b_j \ge 2$ with $a_j = 1, w_j = 1$ double-op $\prod D_{b_j}(D_{b_j} + y)(1)$ ([`analyst/check_double_M_asymptotic.py`](analyst/check_double_M_asymptotic.py), audited `#34`):**
    - Exact SymPy scaling limit $\mathcal{M}_{\text{dbl}}^{(w)}(\Phi)$ turns strictly negative for all $w \ge 5$ (`-6.8832` at $w=5, \Phi=-1/5$; `-18,618` at $w=10$), and `@verifier` (`#34`) confirmed that the outer $D_{b_2}$ does **not** heal the broken interlacing (`W(S_3, S_2)(\lambda a) = -1.7085\times 10^5 < 0$ at $\lambda=1$ and $-5.3775\times 10^5$ at $\lambda=1.2$).
 
 ---
 
 ## 3. High-Precision GLZ Diagnostics & Ruled-Out Routes
 
-- **GLZ empirically holds to $k=72$ (300-dps, `verify_k72_and_turan_terms.py`, `check_two_regime_highk.py`):**
+- **GLZ empirically holds to $k=72$ (300-dps, [`analyst/verify_k72_and_turan_terms.py`](analyst/verify_k72_and_turan_terms.py), [`analyst/check_two_regime_highk.py`](analyst/check_two_regime_highk.py)):**
   - Plain Turán $\tilde{h}_{k,i}^2 - \tilde{h}_{k,i-1}\tilde{h}_{k,i+1} > 0$ on all of $\mathbb{R}$ (`>= +0.02739` normalized on $[-1,0]$, `>= +0.02342` outside).
-  - Equal-degree base quad $E_{k+1,i}$ satisfies $k(J-1) \ge 4.0204$ through $k=40$ (`check_E_sc_and_hutchinson.py`).
+  - Equal-degree base quad $E_{k+1,i}$ satisfies $k(J-1) \ge 4.0204$ through $k=40$ ([`analyst/check_E_sc_and_hutchinson.py`](analyst/check_E_sc_and_hutchinson.py)).
   - Raw $J_{\text{raw}}(t) \ge 1.0648 > 1$ on $(-1, -1/(k+2)]$ through $k=72$, while $J_{\text{raw}}(0)$ drops below $1$ at $k = 35$ (`0.9832` at $k=40$, `0.9422` at $k=70$).
 - **Ruled-out closing mechanisms (verified by explicit counterexamples):**
-  - **Stage 3 $(J, P, L)$ black-box & 6-pole bounds (`test_delta_propagation.py`, `dissect_stage3_poles.py`):** $D_j$ amplifies $P$ by $2.05\times$ and $L$ by $9.17\times$; even under $P \le 3.5, L \le 3$, an uncontrolled cubic complex pole pair drives Stage 3 $j^2\cdot\text{drop}$ to $+9.57$ at $j=160$ (vs GLZ's $\le 0.281$).
+  - **Stage 3 $(J, P, L)$ black-box & 6-pole bounds ([`analyst/test_delta_propagation.py`](analyst/test_delta_propagation.py), [`analyst/dissect_stage3_poles.py`](analyst/dissect_stage3_poles.py)):** $D_j$ amplifies $P$ by $2.05\times$ and $L$ by $9.17\times$; even under $P \le 3.5, L \le 3$, an uncontrolled cubic complex pole pair drives Stage 3 $j^2\cdot\text{drop}$ to $+9.57$ at $j=160$ (vs GLZ's $\le 0.281$).
   - **Two-Regime induction:** Global $J_{\text{raw}} \ge 1$ fails at $k=35$ (breaking Borcea–Brändén applicability), and local $(-1,-1/m]$ fails the addition cross-term (`136/203` random $J_{\text{raw}}\ge 1$ 4-tuples, `#35`).
   - **All other tested routes:** $Q_{k,q}$ proper position (5-line proof fails for all $q > 0$, `#30`); $W(E_{k,i}, E_{k,i+r}) > 0$ fails at $r=8$ ($k \ge 14$) and $r=9$ ($k \ge 10$, exact audit `#28`); $t$-lifted $M=\infty$ quad drops $<1$ at $k=35$; $S$-peeling fails $r=3, k=8, i=7$; Brändén–Solus symmetric decomposition fails $k=4, 6$; Boolean-lattice Rayleigh fails $k=20$; $P_c$/Derivative Sandwich 3-term induction fails close roots; row-coefficient matrix $M_k(r,j) = [t^j]\tilde{h}_{k,k-r}(t)$ is TN ($k=3..6$) **even** for arbitrary $b=[2,2,100,1000]$ (planar network), so TN does not imply real-rootedness; boundary interlacers $A_{m,0}, A_{m,m}$ vanish in the interior (`k=10, i=7`); Bernstein/$-x$ positivity of Turán & Wronskian fails for all $(k,i)$; effective 2-parameter steepest-descent / sign-grid asymptotics are infeasible without a closed-form GF across roots spanning $23+$ orders of magnitude.

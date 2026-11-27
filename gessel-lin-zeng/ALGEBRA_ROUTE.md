@@ -6,7 +6,7 @@
 
 ## 1. Exact Setup & Verified Algebraic Identities
 
-All identities below are verified in exact rational/polynomial arithmetic in `algebra/verify_all_algebra_theorems.py` (exit code 0) and independently audited by `@verifier` (`#23`, `#28`, `#34`).
+All identities below are verified in exact rational/polynomial arithmetic in [`algebra/verify_all_algebra_theorems.py`](algebra/verify_all_algebra_theorems.py) (exit code 0) and independently audited by `@verifier` (`#23`, `#28`, `#34`).
 
 For $k \ge 1$ and $0 \le i \le k$, with $S_L f(x) := (1+Lx)f(x) + x(1-x)f'(x)$ and $P_c f(x) := cf(x) - xf'(x)$:
 $$A_{k,i}(x) = S_{3k-2-i}\bigl(S_{3k-3-i} A_{k-1,i}(x) + A_{k-1,i-1}(x)\bigr), \qquad A_{1,0}(x)=1+x,\; A_{1,1}(x)=1.$$
@@ -46,7 +46,7 @@ For every $m \ge 1$, $D_m$ preserves $q$-Turán ($J \ge q$ on $\mathbb{R}$) and 
 ### Theorem 4 (Exact Sharpness of Ma–Wang Oct 2026 Theorem 2 for ALL $4 \le i \le k-3$ — verified `#34`)
 In `arXiv:2610.03111`, Ma and Wang proved real-rootedness of $A_{k,i}(x)$ for $i \in \{0,1,2,3,k-2,k-1,k\}$ via common interlacers of the subset summands $\{A_{k,S}(x) : |S|=i\}$. By root monotonicity across subsets, $\{A_{k,S} : |S|=i\}$ admits a common interlacer if and only if $A_{k,\text{late}} \prec A_{k,\text{early}}$, where $\text{early} = \{1,\dots,i\}$ and $\text{late} = \{k-i+1,\dots,k\}$.
 
-We prove that **Ma–Wang Theorem 2 is 100% sharp across the entire open range $4 \le i \le k-3$**: non-real nonnegative mixtures $R(x) = \lambda A_{k,\text{late}}(x) + A_{k,\text{early}}(x)$ exist in every boundary family $i=4$, $i=5$, and $i=k-3$, certified via exact rational/integer Laguerre inequalities $R'(x)^2 - R(x)R''(x) < 0$ in `algebra/exact_laguerre_barriers.py` and `algebra/clean_laguerre_certs.py` (independently verified in exact `Fraction`/Cauchy-index arithmetic by `@verifier` `#34`):
+We prove that **Ma–Wang Theorem 2 is 100% sharp across the entire open range $4 \le i \le k-3$**: non-real nonnegative mixtures $R(x) = \lambda A_{k,\text{late}}(x) + A_{k,\text{early}}(x)$ exist in every boundary family $i=4$, $i=5$, and $i=k-3$, certified via exact rational/integer Laguerre inequalities $R'(x)^2 - R(x)R''(x) < 0$ in [`algebra/exact_laguerre_barriers.py`](algebra/exact_laguerre_barriers.py) and [`algebra/clean_laguerre_certs.py`](algebra/clean_laguerre_certs.py) (independently verified in exact `Fraction`/Cauchy-index arithmetic by `@verifier` `#34`):
 
 | Boundary Family | Exact First Fail $k$ ($k-1$ passes) | Degree | Exact Mixture $R(x)$ | Evaluation Point | $R'(x)^2 - R(x)R''(x)$ |
 | :--- | :---: | :---: | :--- | :---: | :---: |
@@ -62,6 +62,6 @@ We prove that **Ma–Wang Theorem 2 is 100% sharp across the entire open range $
 From identity (4) above, the Pascal + outer-$D_{k+1}^2$ step preserves real-stability with zero loss. The **sole** remaining obstruction is the index shift $D_{k+1}^i \mapsto D_{k+2}^i$ (Stage 3), where every local/black-box closure mechanism is now ruled out:
 1. **Universal operator stability disproved (`#31`, certified `#34`):** Even with $a_j = w_j = 1$ and integer $b_j \ge 2$, both $\prod (D_{b_j}+y)(1)$ and $\prod D_{b_j}(D_{b_j}+y)(1)$ break interlacing.
 2. **No linear gauge eliminates Stage 3 (`#32`):** Five-line impossibility proof (any linear gauge forces $D_{k+2}D_{k+1} = D_{k+1}^2$); bivariate symbol of $D_{k+1}^i \mapsto D_{k+2}^i$ fails Borcea–Brändén at $k=4$.
-3. **Black-box 1-step Stage 3 and combined GLZ map $\mathcal{G}_j$ fail (`#24`, `#30`, `algebra/final_go_pivot_check.py`):** Even at GLZ's actual boundary scale $\lambda = 3/j$ ($j=80$), inputs with $J_{\text{in}} \ge 1 + 2/j = 1.025$ on all of $\mathbb{R}$ drop to $J_{\text{out}} = 0.983221 < 1$.
-4. **Two-Regime Split at $t = -1/(k+2)$ (`#34`, `algebra/surgical_checkpoint.py`):** Empirically holds through $k=45$ ($A,B,C > 0$ wherever $J_{\text{raw}} \le 1$, which occurs only at $|t| \lesssim 2^{-k}$), but has no known algebraic induction preserving $J_{\text{raw}} > 1$ on the proper subinterval $(-1,-1/(k+2)]$ or $A' < 0$ on $|t| \lesssim 2^{-k}$.
+3. **Black-box 1-step Stage 3 and combined GLZ map $\mathcal{G}_j$ fail (`#24`, `#30`, [`algebra/final_go_pivot_check.py`](algebra/final_go_pivot_check.py)):** Even at GLZ's actual boundary scale $\lambda = 3/j$ ($j=80$), inputs with $J_{\text{in}} \ge 1 + 2/j = 1.025$ on all of $\mathbb{R}$ drop to $J_{\text{out}} = 0.983221 < 1$.
+4. **Two-Regime Split at $t = -1/(k+2)$ (`#34`, [`algebra/surgical_checkpoint.py`](algebra/surgical_checkpoint.py)):** Empirically holds through $k=45$ ($A,B,C > 0$ wherever $J_{\text{raw}} \le 1$, which occurs only at $|t| \lesssim 2^{-k}$), but has no known algebraic induction preserving $J_{\text{raw}} > 1$ on the proper subinterval $(-1,-1/(k+2)]$ or $A' < 0$ on $|t| \lesssim 2^{-k}$.
 5. **Ruled-out auxiliary routes:** Bivariate $B_k(x,y)$ ($k=10$), $B_k(x,-xy)$ ($k=20$), $Q_k(t,y)$ ($k=35$), $Q_{k,q}$ proper position (all $q>0$), $W(E_{k,0},E_{k,r})>0$ ($r=8,9$), Quad $R \le 4$ closure ($R_{\text{out}} = 81/16$), Derivative Sandwich implying 4th cross-pair (486/500 fail), Brändén–Solus symmetric decomposition, Ma–Wang Prop 1 generalization ($k=5$), and fixed-$k$ degree-$\le 2$ differential syzygy ($k=6$, rank 12/18).
