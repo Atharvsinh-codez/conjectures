@@ -1,18 +1,22 @@
 cff-version: 1.2.0
 title: "Open Conjectures Research & Exact Verification Archive: Resolution of Bardakov-Kozlovskaya Conjecture 3.3(2) and Gessel-Lin-Zeng Conjecture 15 Obstructions"
-message: "If you use these proofs, theorems, 50-digit interval certificates, or exact-arithmetic verification scripts, please cite this repository as below."
+message: "If you use these proofs, theorems, 50-digit interval certificates, or exact-arithmetic verification scripts, please cite the Zenodo preprint or repository as below."
 type: software
+doi: "10.5281/zenodo.24601452"
 authors:
   - family-names: Jadav
-    given-names: Atharsinh
+    given-names: Atharvsinh
+    email: "jadavatharv2010@gmail.com"
     website: "https://athrix.me/"
 repository-code: "https://github.com/Atharvsinh-codez/conjectures"
-url: "https://athrix.me/"
+url: "https://zenodo.org/records/24601452"
 license: MIT
+version: "1.0"
 date-released: "2026-11-27"
 keywords:
   - Bardakov-Kozlovskaya conjecture
   - multivalued groups
+  - Buchstaber-Novikov groups
   - real-rooted polynomials
   - real stability
   - interval arithmetic
@@ -20,3 +24,17 @@ keywords:
   - Gessel-Lin-Zeng conjecture
   - algebraic combinatorics
   - exact arithmetic verification
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Jadav
+      given-names: Atharvsinh
+      email: "jadavatharv2010@gmail.com"
+      website: "https://athrix.me/"
+  title: "A universal sign law and slice real-rootedness for even-order multivalued group polynomials"
+  doi: "10.5281/zenodo.24601452"
+  url: "https://zenodo.org/records/24601452"
+  publisher:
+    name: "Zenodo"
+  year: 2026
+  month: 11

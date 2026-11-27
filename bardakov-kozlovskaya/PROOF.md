@@ -1,6 +1,6 @@
 # The Jadav Sign-Law & Real-Rootedness Theorem (Resolution of Bardakov–Kozlovskaya Conjecture 3.3(2))
 
-**Authors:** Atharsinh Jadav, with the Gemini 4 Neon Extra High Multi-Agent Research Swarm  
+**Authors:** Atharvsinh Jadav, with the Gemini 4 Neon Extra High Multi-Agent Research Swarm  
 **Target Problem:** V. G. Bardakov and T. A. Kozlovskaya, *Multivalued groups and Newton polyhedron*, [arXiv:2305.07261](https://arxiv.org/abs/2305.07261) (May 2023), Conjecture 3.3(2); *Sibirskie Elektronnye Matematicheskie Izvestiya* **20**:2 (2023), 1590–1596, DOI `10.33048/semi.2023.20.097`  
 **Tracking:** `1337isnot1337/solved-conjectures` [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174) · [MathDB #358383](https://mathdb.com/p/358383/conjecture-on-coefficients-of-multivalued-group-polynomials)  
 **Document Status:** **COMPLETE & 100% INDEPENDENTLY VERIFIED.** All 10/10 proof components — Finite Base ($n \le 130$, `#39`, `#57`), Exact Resultants & All Four Boundary Families ($c=0, a=0, b=0, c=1$, `#42`, `#45`), Closed-Form Regime 1 ($\kappa \ge 2.5$, `#59`, `#61`), the Formal Zero-Crevice Partition (`#103`), and all five Regime 2 components (Lemma R2.1 & Sub-regime 2A `#74`, Sub-regime 2C-Upgrade `#77`, Piece G2 `#90`/`#103`, Piece G1 `#101`, and Piece G3 `#124`/`#132`) — have been independently audited and executed with exit code `0` and zero remaining defects.

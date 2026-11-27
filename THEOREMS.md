@@ -1,6 +1,6 @@
 # Catalogue of Proved Theorems, Lemmas & Exact Disproofs
 
-> **Authors:** **[Atharsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
+> **Authors:** **[Atharvsinh Jadav](https://athrix.me/)** ([X `@athrix_codes`](https://x.com/athrix_codes) · [GitHub `Atharvsinh-codez`](https://github.com/Atharvsinh-codez)), with the **Gemini 4 Neon Extra High multi-agent research swarm**  
 > **Scope:** Complete, audited inventory of every theorem, corollary, proposition, lemma, and exact-arithmetic disproof established across both campaigns in this repository. Every entry links directly to its full proof manuscript and independent verification script(s).
 
 ---
