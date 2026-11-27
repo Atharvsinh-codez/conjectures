@@ -20,7 +20,8 @@ Comprehensive audit of [`1337isnot1337/solved-conjectures`](https://github.com/1
 | Major classic open conjectures absent from entire repo | **51** | **UNSOLVED** | Section 6 below |
 | Excluded / confirmed prior external resolutions on `origin/research` | **22** | Already solved externally (do not re-solve) | Reference only |
 
-> **Total distinct UNSOLVED conjectures tracked here:** **15** (listed partial on `main`) + **242** (unlisted inside repo/issues) + **51** (classic open conjectures absent from repo) = **308** open targets.
+> **Total distinct UNSOLVED conjectures tracked at 2026-11-26 baseline:** **15** (listed partial on `main`) + **242** (unlisted inside repo/issues) + **51** (classic open conjectures absent from repo) = **308** open targets.  
+> **Update (2026-11-27):** **1 target SOLVED in this repository** — **Bardakov–Kozlovskaya Conjecture 3.3(2)** (row 90 below, [issue 174](https://github.com/1337isnot1337/solved-conjectures/issues/174)) is now **unconditionally proved and 100% independently verified** (*The Jadav Sign-Law & Real-Rootedness Theorem*; see [`bardakov-kozlovskaya/PROOF.md`](bardakov-kozlovskaya/PROOF.md) and [`bardakov-kozlovskaya/AUDIT.md`](bardakov-kozlovskaya/AUDIT.md)), leaving **307** unsolved targets from this baseline.
 
 ## 1. Unpublished Candidate Proofs on `origin/research` (Not Listed on `main`)
 
@@ -201,7 +202,7 @@ Deduplicated against `main/results/`, `main/docs/`, and confirmed prior-resoluti
 | # | `research/` Directory | Conjecture / Title | Notes |
 | ---: | :--- | :--- | :--- |
 | 89 | [`2026-11-21-blitvic-kammoun-steingrimsson`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-blitvic-kammoun-steingrimsson) | **Blitvić–Kammoun–Steingrímsson's conjecture** | Date: 21 November 2026. Status: research in progress; no resolution or result-count increment. Conjecture 10.6 in Blitvić, Kammoun and Steingrímsson… |
-| 90 | [`2026-11-21-combinatorics-bardakov`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-combinatorics-bardakov) | **Bardakov–Kozlovskaya's conjecture** | Research note, 21 November 2026. Coordination: [issue 174](https://github.com/1337isnot1337/solved-conjectures/issues/174). **Status:** assertion (1) has the… |
+| 90 | [`2026-11-21-combinatorics-bardakov`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-combinatorics-bardakov) | **Bardakov–Kozlovskaya's conjecture** | **✅ SOLVED IN THIS REPO (2026-11-27):** Conjecture 3.3(2) unconditionally proved for all even $n = 2m \ge 2$ with universal sign law $(-1)^{b(c+1)+c}$ ([`PROOF.md`](bardakov-kozlovskaya/PROOF.md) · [`AUDIT.md`](bardakov-kozlovskaya/AUDIT.md)); upstream [issue 174](https://github.com/1337isnot1337/solved-conjectures/issues/174). |
 | 91 | [`2026-11-21-combinatorics-cavey-lee`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-combinatorics-cavey-lee) | **Cavey–Lee's conjecture** | Status: **incomplete**. The conjecture requires both the complete triangular product of linear factors and nonnegative coefficients after division.… |
 | 92 | [`2026-11-21-combinatorics-chauhan-dubey`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-combinatorics-chauhan-dubey) | **Chauhan–Dubey's conjecture** | Unresolved screening checkpoint, 21 November 2026. No proof, counterexample, repository issue, or completed-result count has been produced. Bharat Pratap… |
 | 93 | [`2026-11-21-combinatorics-coulter-moskovsky`](https://github.com/1337isnot1337/solved-conjectures/tree/research/research/2026-11-21-combinatorics-coulter-moskovsky) | **Coulter–Do–Moskovsky's conjecture** | Research package for published Conjecture 3.15 in *Integration on complex Grassmannians, deformed monotone Hurwitz numbers, and interlacing phenomena*… |
@@ -428,7 +429,7 @@ Grouped by realistic tractability so we can pick the right target before startin
   - **Wild number of complete graphs $K_n$ (Dawkins–Nappo–Tong–Zimbizi Conjecture 6.1):** open for $13 \le n \le 154$ (proved for $n \ge 155$).
 - **Tier B — Focused named conjectures from recent papers & open issues** (clean statements, active partial leverage):
   - **Ribbon lattice-path Z-polynomial conjecture** (#747 — open PR #748 in progress)
-  - **Bardakov–Kozlovskaya Conjecture 3.3(2)** (assertion (1) already proved on `research`; nonvanishing for even $n$ remains open)
+  - ~~**Bardakov–Kozlovskaya Conjecture 3.3(2)**~~ — **✅ SOLVED IN THIS REPO (2026-11-27):** see [`bardakov-kozlovskaya/PROOF.md`](bardakov-kozlovskaya/PROOF.md) & [`bardakov-kozlovskaya/AUDIT.md`](bardakov-kozlovskaya/AUDIT.md).
   - **Alexandersson's conjectures** (Catalan peaks, long-cycle excedance, natural-descent, ordered set partitions, border-strip, key-polynomial, big-block)
   - **Sokal's little Domb / Boros–Moll / coefficientwise Apéry conjectures**, **Gessel–Lin–Zeng**, **Cavey–Lee**, **Kurşungöz**, **Mao–Wang (Eulerian-square clause)**, **Pantone–Bóna smallest-terminal**, **Abreu et al. / Kempton et al. Nordhaus–Gaddum spectral conjectures**, **Alhevaz et al. revised distance signless Brouwer conjecture**.
 - **Tier C — Established classic open conjectures** (deep structural progress or potential counterexamples/breakthroughs):
