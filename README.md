@@ -1,17 +1,18 @@
 # Open Conjectures Research & Exact Verification Archive
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24601452.svg)](https://doi.org/10.5281/zenodo.24601452) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24601452.svg)](https://doi.org/10.5281/zenodo.24601452) [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--3671--6846-A6CE39.svg)](https://orcid.org/0009-0006-3671-6846) [![Lean 4 Core](https://img.shields.io/badge/Lean%204%20Core-v4.36.0%20%7C%200%20sorry-blueviolet.svg)](lean/README.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > **Headline Result (2026-11-27): ✅ Bardakov–Kozlovskaya Conjecture 3.3(2) — COMPLETELY SOLVED & 100% INDEPENDENTLY VERIFIED**  
-> **Published Preprint (Zenodo DOI):** [*A universal sign law and slice real-rootedness for even-order multivalued group polynomials*](https://zenodo.org/records/24601452) (`doi:10.5281/zenodo.24601452`) · [LaTeX Source (`main.tex`)](bardakov-kozlovskaya/paper/main.tex)  
-> **Curated by [Atharvsinh Jadav](https://athrix.me/)** — [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)* · Licensed under the [MIT License](LICENSE).
+> **Published Preprint:** [Zenodo DOI (`10.5281/zenodo.24601452`)](https://zenodo.org/records/24601452) · HAL (`hal-05886306v1`, awaiting moderation) · [LaTeX Source (`main.tex`)](bardakov-kozlovskaya/paper/main.tex) · **[Lean 4 Core Formalization (`lean/`)](lean/README.md)**  
+> **Curated by [Atharvsinh Jadav](https://athrix.me/)** — [ORCID (`0009-0006-3671-6846`)](https://orcid.org/0009-0006-3671-6846) · [Website](https://athrix.me/) · [X (`@athrix_codes`)](https://x.com/athrix_codes) · [GitHub (`Atharvsinh-codez`)](https://github.com/Atharvsinh-codez) *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)* · Licensed under the [MIT License](LICENSE).
 
-A reproducible, zero-trust mathematical research repository combining **complete proofs**, **50-digit outward-rounded interval arithmetic (`mpmath.iv`) certificates**, **exact integer & rational Sturm/Cauchy-index verifiers**, and **honest boundary-obstruction theorems** across multivalued group theory and algebraic combinatorics.
+A reproducible, zero-trust mathematical research repository combining **complete proofs**, a **zero-dependency Lean 4 Core formalization (`v4.36.0`, zero `sorry`, zero custom axioms)**, **50-digit outward-rounded interval arithmetic (`mpmath.iv`) certificates**, **exact integer & rational Sturm/Cauchy-index verifiers**, and **honest boundary-obstruction theorems** across multivalued group theory and algebraic combinatorics.
 
 | Repository Snapshot | Exact Verified Metric |
 | :--- | :--- |
 | **Resolved Conjecture** | **Bardakov–Kozlovskaya Conjecture 3.3(2)** ([arXiv:2305.07261](https://arxiv.org/abs/2305.07261), [Issue #174](https://github.com/1337isnot1337/solved-conjectures/issues/174), [MathDB #358383](https://mathdb.com/p/358383/conjecture-on-coefficients-of-multivalued-group-polynomials)) — **10/10 proof components signed off** |
-| **Published Preprint (PDF & LaTeX)** | **[Zenodo Record `24601452`](https://zenodo.org/records/24601452)** ([`doi:10.5281/zenodo.24601452`](https://doi.org/10.5281/zenodo.24601452)) · Standalone Overleaf LaTeX source [`bardakov-kozlovskaya/paper/main.tex`](bardakov-kozlovskaya/paper/main.tex) |
+| **Published Preprint (PDF & LaTeX)** | **[Zenodo Record `24601452`](https://zenodo.org/records/24601452)** ([`doi:10.5281/zenodo.24601452`](https://doi.org/10.5281/zenodo.24601452)) · HAL `hal-05886306v1` · Standalone LaTeX [`bardakov-kozlovskaya/paper/main.tex`](bardakov-kozlovskaya/paper/main.tex) |
+| **Lean 4 Core Formalization** | **[`lean/` (`ConjecturesCore`)](lean/README.md)** — pure `leanprover/lean4:v4.36.0`, **0 external deps, 0 `sorry`, 0 custom axioms, 0 `native_decide`** (14 kernel-checked theorems + `#print axioms` audit) |
 | **Open Target Archived** | **Gessel–Lin–Zeng Conjecture 15** ([arXiv:1201.0622](https://arxiv.org/abs/1201.0622), [Issue #84](https://github.com/1337isnot1337/solved-conjectures/issues/84)) — **OPEN**, with sharp boundary obstructions & general real-stability theorems |
 | **Python Verification & Research Suite** | **425 `.py` files · 69,590 lines of Python** (`bardakov-kozlovskaya/`: 182 files / 32,715 lines; `gessel-lin-zeng/`: 243 files / 36,875 lines) |
 | **Manuscripts & Reference Catalogues** | **19 `.md` documents + standalone LaTeX paper** (Zenodo preprint, master proof, independent audit ledgers, theorem & equation compendia, research chronicle, 308-conjecture tracker) |
@@ -24,6 +25,7 @@ A reproducible, zero-trust mathematical research repository combining **complete
 | Document | Purpose |
 | :--- | :--- |
 | **[`bardakov-kozlovskaya/paper/main.tex`](bardakov-kozlovskaya/paper/main.tex)** | Full standalone Overleaf-ready LaTeX research paper published on **[Zenodo (`doi:10.5281/zenodo.24601452`)](https://zenodo.org/records/24601452)** with 5 TikZ diagrams, 4 tables, and Appendices A-C. |
+| **[`lean/README.md`](lean/README.md)** | Standalone **Lean 4 Core (`v4.36.0`)** formalization (`ConjecturesCore`, zero `sorry`, zero custom axioms, zero `native_decide`) kernel-verifying the universal sign law, all-$n$ $c=0$ boundary, Lemma 4.3(1), Piece G1 $D_r^2$-cancellation, Proposition 1.3 Global Zero-Crevice Partition Completeness, exact Newton/peeling engine ($n=2..12$), and GLZ $B_{10}$ certificate. |
 | **[`JOURNEY.md`](JOURNEY.md)** | *"How We Solved This: Atharvsinh Jadav & Gemini 4 Neon Extra High"* — full chronicle of target screening, catching a live external collision, the GLZ pivot, cracking BK 3.3(2), and the 17 adversarial audit bugs caught & killed. |
 | **[`THEOREMS.md`](THEOREMS.md)** | Complete catalogue of all **30** theorems, corollaries, lemmas, propositions, and exact disproofs proved across both campaigns. |
 | **[`EQUATIONS.md`](EQUATIONS.md)** | Clean LaTeX compendium of every defining polynomial, resultant, trigonometric derivative, 1D circle integral, Cauchy–Riemann / Hubbard–Stratonovich / IBP / Poisson identity, and real-stability equation. |
@@ -92,6 +94,13 @@ Requirements: **Python 3.10+** with `mpmath`, `sympy`, `numpy`, and `scipy`.
 pip install mpmath sympy numpy scipy
 ```
 
+### Lean 4 Core Kernel Verification (< 10 seconds, zero Mathlib download)
+```bash
+cd lean
+lake build
+```
+Compiles all 5 Lean 4 Core modules (`SignLaw`, `BoundaryAndSample`, `ZeroCrevicePartition`, `ExactEngine`, `AxiomAudit`) and prints `#print axioms` for every theorem (zero `sorryAx`, zero custom axioms, zero `Lean.ofReduceBool`). See [`lean/README.md`](lean/README.md) for the exact scope boundary between Lean 4 kernel proofs and 50-digit `mpmath.iv` analytic certificates.
+
 ### Fast Smoke Suite (< 30 seconds total, run from repository root)
 ```bash
 # Bardakov-Kozlovskaya: exact 3-way engine, Regime 1, Lemma R2.1 + 2A, and 32 G3 corners
@@ -111,8 +120,8 @@ For full end-to-end 50-digit `mpmath.iv` certification commands (including `cert
 
 ## 4. Attribution, Citation & License
 
-- **Author / Curator:** **Atharvsinh Jadav** — Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)*.
-- **Preprint (Zenodo DOI):** https://doi.org/10.5281/zenodo.24601452 (record: https://zenodo.org/records/24601452)
+- **Author / Curator:** **Atharvsinh Jadav** — ORCID: https://orcid.org/0009-0006-3671-6846 · Website: https://athrix.me/ · X: https://x.com/athrix_codes · GitHub: https://github.com/Atharvsinh-codez *(with the **Gemini 4 Neon Extra High multi-agent research swarm**)*.
+- **Preprint:** Zenodo DOI https://doi.org/10.5281/zenodo.24601452 (record: https://zenodo.org/records/24601452) · HAL `hal-05886306v1` (awaiting moderation)
 - **Citation:** See [`CITATION.cff`](CITATION.cff) (or use GitHub's *Cite this repository* button):
   ```bibtex
   @misc{jadav2026universalsignlaw,

@@ -1,0 +1,6 @@
+name = "conjectures_core"
+version = "0.1.0"
+defaultTargets = ["ConjecturesCore"]
+
+[[lean_lib]]
+name = "ConjecturesCore"
