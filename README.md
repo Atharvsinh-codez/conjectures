@@ -86,10 +86,10 @@ $$p_n(x, y, z) = \prod_{k=0}^{n-1}\Bigl(z - (-1)^n(\alpha + \zeta^k \beta)^n\Big
 
 ## 3. Quick Reproduction Instructions
 
-Requirements: **Python 3.10+** with `mpmath`, `sympy`, and `numpy`.
+Requirements: **Python 3.10+** with `mpmath`, `sympy`, `numpy`, and `scipy`.
 
 ```bash
-pip install mpmath sympy numpy
+pip install mpmath sympy numpy scipy
 ```
 
 ### Fast Smoke Suite (< 30 seconds total, run from repository root)
