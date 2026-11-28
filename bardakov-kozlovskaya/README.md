@@ -72,7 +72,7 @@ All certified `.py` scripts are stored byte-for-byte unchanged with `.gitattribu
 | [`analyst/certify_R2_3_iv.py`](analyst/certify_R2_3_iv.py) | Sub-regime 2C-Upgrade (50-dps `iv`) | 13.1s | `646B958B5A04A70837F3511D75356F4BC03CF51BD3BE126181B102BE3B02BACB` |
 | [`algebra/verify_regime1_complete.py`](algebra/verify_regime1_complete.py) | Closed-form Regime 1 + 13,006 checks | ~2s | `F2F3D6FAD49FFD2C0BF16A470E2AFE030C759C1CAC5902173BAAB7D1E7807785` |
 | [`verify/engine.py`](verify/engine.py) | Exact integer base ($n=2..84$, SymPy/Wendt cross-checks) | ~2s | `B8FB9F46F68B786A1E79EA20F916868F2CB370CA0DAA3FD240A138684FE4B84D` |
-| [`verify/fast_certify_140.py`](verify/fast_certify_140.py) | Exact integer $S_3$-Kronecker base ($n=86..130$) | ~120s | `5A136E4DE9D41B9A910FC80CF0909B8EBB4D9C28A80800A654A2413021439EA3` |
+| [`verify/fast_certify_140.py`](verify/fast_certify_140.py) | Exact integer $S_3$-Kronecker base ($n=86..130$) | ~120s | `B14C6C8B50EF8358DEB01CEFF5F25902ABED456B59D82AED440702D2E1CB5B76` |
 
 ---
 
@@ -100,10 +100,10 @@ All certified `.py` scripts are stored byte-for-byte unchanged with `.gitattribu
 
 ## 5. Exact Reproduction Instructions
 
-Requirements: **Python 3.10+** with `mpmath`, `sympy`, and `numpy`.
+Requirements: **Python 3.10+** with `mpmath`, `sympy`, `numpy`, and `scipy`.
 
 ```bash
-pip install mpmath sympy numpy
+pip install mpmath sympy numpy scipy
 ```
 
 ### Quick Smoke Checks (< 30 seconds total, run from repository root)

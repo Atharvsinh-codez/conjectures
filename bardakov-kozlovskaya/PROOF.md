@@ -472,4 +472,4 @@ This completes the proof of Theorem 1.1 and Corollary 1.2 for all even integers 
 
 1. V. G. Bardakov and T. A. Kozlovskaya, *Multivalued groups and Newton polyhedron*, [arXiv:2305.07261](https://arxiv.org/abs/2305.07261) (2023); *Sibirskie Elektronnye Matematicheskie Izvestiya* **20**:2 (2023), 1590–1596.
 2. I. Gaiur, V. Rubtsov, and D. van Straten, *Higher Bessel functions and $n$-valued groups*, [arXiv:2405.03015](https://arxiv.org/abs/2405.03015) (2024).
-3. V. M. Buchstaber and D. V. Kornev, *Multivalued groups and Wendt determinants*, [arXiv:2505.04296](https://arxiv.org/abs/2505.04296) (2025); *Sbornik: Mathematics* **217**:8 (2026).
+3. V. M. Buchstaber and M. Kornev, *Multivalued groups and Wendt determinants*, [arXiv:2505.04296](https://arxiv.org/abs/2505.04296) (2025); *Sbornik: Mathematics* **217**:8 (2026).

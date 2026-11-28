@@ -270,6 +270,7 @@ def certify_single_n(n: int) -> Tuple[int, int, int, int, float]:
             zeros += 1
         elif (1 if val > 0 else -1) != exp_sgn:
             sign_bad += 1
+    assert zeros == 0 and sign_bad == 0, f"Certification failed at n={n}: zeros={zeros}, sign_bad={sign_bad}"
     dt = time.perf_counter() - t0
     return (n, len(coeffs), zeros, sign_bad, dt)
 
@@ -305,6 +306,7 @@ def main():
     print(f"\nSUMMARY even n = 86..130 ({tot_c} exact integer coefficients, wall time {time.perf_counter()-t0:.2f}s):")
     print(f"  Total zeros:               {tot_z}")
     print(f"  Total sign-law violations: {tot_sb}")
+    assert tot_z == 0 and tot_sb == 0, f"Certification failed: total_zeros={tot_z}, total_sign_violations={tot_sb}"
 
 
 if __name__ == "__main__":
